@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Projetos/exe_nexys/exe_nexys.runs/impl_1'
+HD_PWD='C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log sw_led.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source sw_led.tcl -notrace
+EAStep vivado -log VGAController.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGAController.tcl -notrace
 
 

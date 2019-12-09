@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Projetos/exe_nexys/exe_nexys.runs/synth_1'
+HD_PWD='C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log sw_led.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sw_led.tcl
+EAStep vivado -log VGAController.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl

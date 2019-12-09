@@ -1,0 +1,98 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Dec  9 03:15:18 2019
+| Host         : LAPTOP-IJTJ43C1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file VGAController_control_sets_placed.rpt
+| Design       : VGAController
+| Device       : xc7a100t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              62 |           23 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             177 |           69 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+--------------------------------------+----------------------------------------------+------------------+----------------+
+|         Clock Signal        |             Enable Signal            |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
++-----------------------------+--------------------------------------+----------------------------------------------+------------------+----------------+
+|  Component1/firstDivider    |                                      |                                              |                1 |              1 |
+|  VGAClock_BUFG              |                                      | Component2/ballControl/SR[1]                 |                1 |              1 |
+|  VGAClock_BUFG              |                                      | Component2/ballControl/SR[2]                 |                1 |              1 |
+|  clock_IBUF_BUFG            |                                      |                                              |                1 |              1 |
+|  playingCurrent_reg_i_2_n_0 | BTNC_IBUF                            | Component2/ballControl/currentX0             |                1 |              1 |
+|  VGAClock_BUFG              |                                      |                                              |                1 |              2 |
+|  VGAClock_BUFG              |                                      | Component2/ballControl/vPosCurrent_reg[9][0] |                1 |              2 |
+|  VGAClock_BUFG              |                                      | Component2/ballControl/SR[0]                 |                1 |              3 |
+|  VGAClock_BUFG              |                                      | Component2/rgbCurrent[8]_i_1_n_0             |                1 |              5 |
+|  VGAClock_BUFG              | Component2/paddleCursor[9]_i_2_n_0   | Component2/ballControl/SS[0]                 |                6 |             10 |
+|  VGAClock_BUFG              | Component2/paddleAICursor[9]_i_1_n_0 | Component2/ballControl/SS[0]                 |                6 |             12 |
+|  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleAILeft          |                4 |             16 |
+|  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleAIRight         |                4 |             16 |
+|  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleLeft            |                4 |             16 |
+|  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleRight           |                4 |             16 |
+|  VGAClock_BUFG              |                                      | Component2/clear                             |               10 |             19 |
+|  playingCurrent_reg_i_2_n_0 | Component2/ballControl/playing       | Component2/ballControl/currentX[9]_i_1_n_0   |                6 |             20 |
+|  playingCurrent_reg_i_2_n_0 |                                      |                                              |               11 |             21 |
+|  VGAClock_BUFG              |                                      | Component2/ballMovement                      |                8 |             31 |
+|  VGAClock_BUFG              | Component2/vPosCurrent0              | Component2/vPosNext                          |               34 |             70 |
++-----------------------------+--------------------------------------+----------------------------------------------+------------------+----------------+
+
+

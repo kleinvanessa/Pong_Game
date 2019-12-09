@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log sw_led.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sw_led.tcl
+    with args -log VGAController.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
 
 
 ****** Vivado v2019.2 (64-bit)
@@ -8,23 +8,39 @@
   **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source sw_led.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 461.344 ; gain = 181.867
-Command: synth_design -top sw_led -part xc7a100tcsg324-1
+source VGAController.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 462.207 ; gain = 183.063
+Command: synth_design -top VGAController -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10680 
+INFO: Helper process launched with PID 15148 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1253.930 ; gain = 226.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1254.941 ; gain = 225.391
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'sw_led' [C:/Projetos/exe_nexys/exe_nexys.srcs/sources_1/imports/nexys4-ddr_sw_demo/sw_led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'sw_led' (1#1) [C:/Projetos/exe_nexys/exe_nexys.srcs/sources_1/imports/nexys4-ddr_sw_demo/sw_led.v:23]
-WARNING: [Synth 8-3330] design sw_led has an empty top module
+INFO: [Synth 8-638] synthesizing module 'VGAController' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/VGAController.vhd:18]
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/ClockDivider.vhd:12' bound to instance 'Component1' of component 'ClockDivider' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/VGAController.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/ClockDivider.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider' (1#1) [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/ClockDivider.vhd:17]
+INFO: [Synth 8-3491] module 'Sync' declared at 'C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd:15' bound to instance 'Component2' of component 'Sync' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/VGAController.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'Sync' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd:22]
+INFO: [Synth 8-3491] module 'BallController' declared at 'C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:14' bound to instance 'ballControl' of component 'BallController' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'BallController' [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:23]
+WARNING: [Synth 8-6014] Unused sequential element wallHorizontalBounce_reg was removed.  [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element paddleSurfaceBounce_reg was removed.  [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:60]
+WARNING: [Synth 8-6014] Unused sequential element paddleSideBounce_reg was removed.  [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element paddleAISurfaceBounce_reg was removed.  [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element paddleAISideBounce_reg was removed.  [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'BallController' (2#1) [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd:23]
+WARNING: [Synth 8-3848] Net frameVisible in module/entity Sync does not have driver. [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Sync' (3#1) [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'VGAController' (4#1) [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/VGAController.vhd:18]
+WARNING: [Synth 8-3331] design VGAController has unconnected port BTNU
+WARNING: [Synth 8-3331] design VGAController has unconnected port BTND
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1326.836 ; gain = 299.809
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1328.086 ; gain = 298.535
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -37,88 +53,92 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1326.836 ; gain = 299.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1328.086 ; gain = 298.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1326.836 ; gain = 299.809
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1328.086 ; gain = 298.535
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1326.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1328.086 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L24N_T3_RS0_15' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:4]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L3N_T0_DQS_EMCCLK_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:6]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L6N_T0_D08_VREF_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:8]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L13N_T2_MRCC_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:10]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L12N_T1_MRCC_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:12]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L7N_T1_D10_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:14]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L17N_T2_A13_D29_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:16]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L5N_T0_D07_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:18]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L24N_T3_34' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:20]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_25_34' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:22]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L15P_T2_DQS_RDWR_B_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:24]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L23P_T3_A03_D19_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:26]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L24P_T3_35' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:28]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L20P_T3_A08_D24_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:30]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L19N_T3_A09_D25_VREF_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:32]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L21P_T3_DQS_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:34]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L18P_T2_A24_15' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:40]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L24P_T3_RS1_15' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:42]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L17N_T2_A25_15' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:44]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L8P_T1_D11_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:46]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L7P_T1_D09_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:48]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L18N_T2_A11_D27_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:50]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L17P_T2_A14_D30_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:52]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L18P_T2_A12_D28_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:54]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L16N_T2_A15_D31_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:56]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L14N_T2_SRCC_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:58]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L22P_T3_A05_D21_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:60]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L15N_T2_DQS_DOUT_CSO_B_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:62]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L16P_T2_CSI_B_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:64]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L22N_T3_A04_D20_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:66]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L20N_T3_A07_D23_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:68]
-CRITICAL WARNING: [Designutils 20-1307] Command 'IO_L21N_T3_DQS_A06_D22_14' is not supported in the xdc constraint file. [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc:70]
-Finished Parsing XDC File [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projetos/exe_nexys/exe_nexys.srcs/constrs_1/imports/nexys4-ddr_sw_demo/Nexys4-DDR_sw_Demo.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sw_led_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/sw_led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/constrs_1/imports/Projetos/Nexys-4-DDR-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/constrs_1/imports/Projetos/Nexys-4-DDR-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/constrs_1/imports/Projetos/Nexys-4-DDR-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/constrs_1/imports/Projetos/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/constrs_1/imports/Projetos/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGAController_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGAController_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1333.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1443.484 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1333.723 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1443.484 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:54 . Memory (MB): peak = 1333.723 ; gain = 306.695
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1443.484 ; gain = 413.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:54 . Memory (MB): peak = 1333.723 ; gain = 306.695
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1443.484 ; gain = 413.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:54 . Memory (MB): peak = 1333.723 ; gain = 306.695
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:41 . Memory (MB): peak = 1443.484 ; gain = 413.934
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "paddleWidth" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "message[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "result1[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "result2[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gameLabel[0]" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:54 . Memory (MB): peak = 1333.723 ; gain = 306.695
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1443.484 ; gain = 413.934
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |Sync__GB0     |           1|     18917|
+|2     |Sync__GB1     |           1|     18224|
+|3     |Sync__GB2     |           1|     25317|
+|4     |Sync__GB3     |           1|     17963|
+|5     |Sync__GB4     |           1|     17969|
+|6     |ClockDivider  |           1|         4|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 26    
+	   2 Input     31 Bit       Adders := 22    
+	   2 Input     11 Bit       Adders := 3     
+	   3 Input     11 Bit       Adders := 17    
+	   4 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 55    
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 7     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   6 Input     12 Bit        Muxes := 1     
+	   9 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -126,6 +146,46 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module ClockDivider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module BallController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	   2 Input     31 Bit       Adders := 11    
+	   2 Input     10 Bit       Adders := 24    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+Module Sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 10    
+	   2 Input     31 Bit       Adders := 11    
+	   2 Input     11 Bit       Adders := 3     
+	   3 Input     11 Bit       Adders := 17    
+	   4 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 31    
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input     12 Bit        Muxes := 1     
+	   9 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -138,43 +198,82 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3330] design sw_led has an empty top module
+WARNING: [Synth 8-3331] design VGAController has unconnected port BTNU
+WARNING: [Synth 8-3331] design VGAController has unconnected port BTND
+DSP Report: Generating DSP paddleAIRight4, operation Mode is: A*B.
+DSP Report: operator paddleAIRight4 is absorbed into DSP paddleAIRight4.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:57 . Memory (MB): peak = 1333.723 ; gain = 306.695
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:08:35 . Memory (MB): peak = 1443.484 ; gain = 413.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|Sync        | logo[0]    | 256x143       | LUT            | 
++------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Sync        | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |Sync__GB0     |           1|      1240|
+|2     |Sync__GB1     |           1|       989|
+|3     |Sync__GB2     |           1|      1394|
+|4     |Sync__GB3     |           1|       948|
+|5     |Sync__GB4     |           1|      6326|
+|6     |ClockDivider  |           1|         4|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 1383.059 ; gain = 356.031
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:45 ; elapsed = 00:10:46 . Memory (MB): peak = 1459.059 ; gain = 429.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:10 . Memory (MB): peak = 1383.059 ; gain = 356.031
+Finished Timing Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:11:24 . Memory (MB): peak = 1461.680 ; gain = 432.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |Sync__GB0     |           1|      1240|
+|2     |Sync__GB1     |           1|       989|
+|3     |Sync__GB2     |           1|      1394|
+|4     |Sync__GB3     |           1|       948|
+|5     |Sync__GB4     |           1|      6322|
+|6     |ClockDivider  |           1|         4|
++------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:11 . Memory (MB): peak = 1392.594 ; gain = 365.566
+Finished Technology Mapping : Time (s): cpu = 00:01:51 ; elapsed = 00:12:28 . Memory (MB): peak = 1553.918 ; gain = 524.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,13 +297,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:13:09 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:13:10 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,25 +322,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:01 ; elapsed = 00:13:13 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:13:13 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:13:13 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:13:13 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -254,40 +353,59 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |IBUF |    16|
-|2     |OBUF |    16|
-+------+-----+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     3|
+|2     |CARRY4  |   324|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |   391|
+|5     |LUT2    |   144|
+|6     |LUT3    |   169|
+|7     |LUT4    |   406|
+|8     |LUT5    |   408|
+|9     |LUT6    |  1917|
+|10    |MUXF7   |   387|
+|11    |MUXF8   |   103|
+|12    |FDRE    |   219|
+|13    |FDSE    |    45|
+|14    |IBUF    |     6|
+|15    |OBUF    |    14|
++------+--------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    32|
-+------+---------+-------+------+
++------+----------------+---------------+------+
+|      |Instance        |Module         |Cells |
++------+----------------+---------------+------+
+|1     |top             |               |  4537|
+|2     |  Component1    |ClockDivider   |     4|
+|3     |  Component2    |Sync           |  4421|
+|4     |    ballControl |BallController |  1028|
++------+----------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:01:19 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:13:14 . Memory (MB): peak = 1558.465 ; gain = 528.914
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:56 . Memory (MB): peak = 1408.355 ; gain = 374.441
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:01:20 . Memory (MB): peak = 1408.355 ; gain = 381.328
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:14:24 . Memory (MB): peak = 1558.465 ; gain = 413.516
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:14:40 . Memory (MB): peak = 1558.465 ; gain = 528.914
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1420.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 1558.465 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 815 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1427.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1558.465 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 2 Warnings, 32 Critical Warnings and 0 Errors encountered.
+29 Infos, 11 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:43 . Memory (MB): peak = 1427.281 ; gain = 696.141
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1427.281 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:15:37 . Memory (MB): peak = 1558.465 ; gain = 825.105
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1558.465 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Projetos/exe_nexys/exe_nexys.runs/synth_1/sw_led.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file sw_led_utilization_synth.rpt -pb sw_led_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 11:27:16 2019...
+INFO: [Common 17-1381] The checkpoint 'C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.runs/synth_1/VGAController.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1558.465 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 03:07:22 2019...
