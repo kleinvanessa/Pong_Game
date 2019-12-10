@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Dec  9 03:16:39 2019
+| Date         : Tue Dec 10 10:46:23 2019
 | Host         : LAPTOP-IJTJ43C1 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file VGAController_timing_summary_routed.rpt -pb VGAController_timing_summary_routed.pb -rpx VGAController_timing_summary_routed.rpx -warn_on_violation
 | Design       : VGAController
@@ -56,7 +56,7 @@ Table of Contents
 --------------------
  There is 1 register/latch pin with no clock driven by root clock pin: Component1/firstDivider_reg/Q (HIGH)
 
- There are 220 register/latch pins with no clock driven by root clock pin: Component1/secondDivider_reg/Q (HIGH)
+ There are 164 register/latch pins with no clock driven by root clock pin: Component1/secondDivider_reg/Q (HIGH)
 
  There are 42 register/latch pins with no clock driven by root clock pin: Component2/ballMovement_reg/Q (HIGH)
 
@@ -73,7 +73,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 679 pins that are not constrained for maximum delay. (HIGH)
+ There are 507 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -223,7 +223,7 @@ Slack (MET) :             8.524ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           1.625     5.228    Component1/clockIn
+                         net (fo=1, routed)           1.625     5.228    Component1/clock
     SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
   -------------------------------------------------------------------    -------------------
     SLICE_X52Y95         FDRE (Prop_fdre_C_Q)         0.456     5.684 f  Component1/firstDivider_reg/Q
@@ -240,7 +240,7 @@ Slack (MET) :             8.524ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           1.504    14.927    Component1/clockIn
+                         net (fo=1, routed)           1.504    14.927    Component1/clock
     SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
                          clock pessimism              0.301    15.228    
                          clock uncertainty           -0.035    15.192    
@@ -281,7 +281,7 @@ Slack (MET) :             0.427ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           0.564     1.483    Component1/clockIn
+                         net (fo=1, routed)           0.564     1.483    Component1/clock
     SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
   -------------------------------------------------------------------    -------------------
     SLICE_X52Y95         FDRE (Prop_fdre_C_Q)         0.141     1.624 f  Component1/firstDivider_reg/Q
@@ -298,7 +298,7 @@ Slack (MET) :             0.427ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           0.834     1.999    Component1/clockIn
+                         net (fo=1, routed)           0.834     1.999    Component1/clock
     SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
                          clock pessimism             -0.515     1.483    
     SLICE_X52Y95         FDRE (Hold_fdre_C_D)         0.091     1.574    Component1/firstDivider_reg
