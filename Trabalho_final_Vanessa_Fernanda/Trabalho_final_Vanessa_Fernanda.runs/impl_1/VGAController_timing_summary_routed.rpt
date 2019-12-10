@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Dec 10 10:46:23 2019
+| Date         : Tue Dec 10 18:54:09 2019
 | Host         : LAPTOP-IJTJ43C1 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file VGAController_timing_summary_routed.rpt -pb VGAController_timing_summary_routed.pb -rpx VGAController_timing_summary_routed.rpx -warn_on_violation
 | Design       : VGAController
@@ -56,7 +56,7 @@ Table of Contents
 --------------------
  There is 1 register/latch pin with no clock driven by root clock pin: Component1/firstDivider_reg/Q (HIGH)
 
- There are 164 register/latch pins with no clock driven by root clock pin: Component1/secondDivider_reg/Q (HIGH)
+ There are 181 register/latch pins with no clock driven by root clock pin: Component1/secondDivider_reg/Q (HIGH)
 
  There are 42 register/latch pins with no clock driven by root clock pin: Component2/ballMovement_reg/Q (HIGH)
 
@@ -73,7 +73,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 507 pins that are not constrained for maximum delay. (HIGH)
+ There are 551 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -132,7 +132,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      8.524        0.000                      0                    1        0.427        0.000                      0                    1        4.500        0.000                       0                     2  
+      8.908        0.000                      0                    1        0.263        0.000                      0                    1        4.500        0.000                       0                     2  
 
 
 All user specified timing constraints are met.
@@ -155,7 +155,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         8.524        0.000                      0                    1        0.427        0.000                      0                    1        4.500        0.000                       0                     2  
+sys_clk_pin         8.908        0.000                      0                    1        0.263        0.000                      0                    1        4.500        0.000                       0                     2  
 
 
 ------------------------------------------------------------------------------------------------
@@ -186,15 +186,15 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        8.524ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.427ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        8.908ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.263ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             8.524ns  (required time - arrival time)
+Slack (MET) :             8.908ns  (required time - arrival time)
   Source:                 Component1/firstDivider_reg/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            Component1/firstDivider_reg/D
@@ -202,7 +202,7 @@ Slack (MET) :             8.524ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        1.469ns  (logic 0.580ns (39.472%)  route 0.889ns (60.528%))
+  Data Path Delay:        1.085ns  (logic 0.580ns (53.441%)  route 0.505ns (46.559%))
   Logic Levels:           1  (LUT1=1)
   Clock Path Skew:        0.000ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    4.927ns = ( 14.927 - 10.000 ) 
@@ -223,14 +223,14 @@ Slack (MET) :             8.524ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clock_IBUF_inst/O
                          net (fo=1, routed)           2.025     3.506    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.602 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           1.625     5.228    Component1/clock
-    SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
+                         net (fo=1, routed)           1.625     5.228    Component1/clockIn
+    SLICE_X53Y95         FDRE                                         r  Component1/firstDivider_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X52Y95         FDRE (Prop_fdre_C_Q)         0.456     5.684 f  Component1/firstDivider_reg/Q
-                         net (fo=2, routed)           0.889     6.573    Component1/firstDivider
-    SLICE_X52Y95         LUT1 (Prop_lut1_I0_O)        0.124     6.697 r  Component1/firstDivider_i_1/O
-                         net (fo=1, routed)           0.000     6.697    Component1/p_0_in
-    SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/D
+    SLICE_X53Y95         FDRE (Prop_fdre_C_Q)         0.456     5.684 f  Component1/firstDivider_reg/Q
+                         net (fo=2, routed)           0.505     6.189    Component1/firstDivider
+    SLICE_X53Y95         LUT1 (Prop_lut1_I0_O)        0.124     6.313 r  Component1/firstDivider_i_1/O
+                         net (fo=1, routed)           0.000     6.313    Component1/p_0_in
+    SLICE_X53Y95         FDRE                                         r  Component1/firstDivider_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -240,16 +240,16 @@ Slack (MET) :             8.524ns  (required time - arrival time)
     E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clock_IBUF_inst/O
                          net (fo=1, routed)           1.920    13.331    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.422 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           1.504    14.927    Component1/clock
-    SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
+                         net (fo=1, routed)           1.504    14.927    Component1/clockIn
+    SLICE_X53Y95         FDRE                                         r  Component1/firstDivider_reg/C
                          clock pessimism              0.301    15.228    
                          clock uncertainty           -0.035    15.192    
-    SLICE_X52Y95         FDRE (Setup_fdre_C_D)        0.029    15.221    Component1/firstDivider_reg
+    SLICE_X53Y95         FDRE (Setup_fdre_C_D)        0.029    15.221    Component1/firstDivider_reg
   -------------------------------------------------------------------
                          required time                         15.221    
-                         arrival time                          -6.697    
+                         arrival time                          -6.313    
   -------------------------------------------------------------------
-                         slack                                  8.524    
+                         slack                                  8.908    
 
 
 
@@ -257,7 +257,7 @@ Slack (MET) :             8.524ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.427ns  (arrival time - required time)
+Slack (MET) :             0.263ns  (arrival time - required time)
   Source:                 Component1/firstDivider_reg/C
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            Component1/firstDivider_reg/D
@@ -265,7 +265,7 @@ Slack (MET) :             0.427ns  (arrival time - required time)
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.518ns  (logic 0.186ns (35.881%)  route 0.332ns (64.119%))
+  Data Path Delay:        0.354ns  (logic 0.186ns (52.498%)  route 0.168ns (47.502%))
   Logic Levels:           1  (LUT1=1)
   Clock Path Skew:        0.000ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    1.999ns
@@ -281,14 +281,14 @@ Slack (MET) :             0.427ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clock_IBUF_inst/O
                          net (fo=1, routed)           0.644     0.894    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           0.564     1.483    Component1/clock
-    SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
+                         net (fo=1, routed)           0.564     1.483    Component1/clockIn
+    SLICE_X53Y95         FDRE                                         r  Component1/firstDivider_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X52Y95         FDRE (Prop_fdre_C_Q)         0.141     1.624 f  Component1/firstDivider_reg/Q
-                         net (fo=2, routed)           0.332     1.957    Component1/firstDivider
-    SLICE_X52Y95         LUT1 (Prop_lut1_I0_O)        0.045     2.002 r  Component1/firstDivider_i_1/O
-                         net (fo=1, routed)           0.000     2.002    Component1/p_0_in
-    SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/D
+    SLICE_X53Y95         FDRE (Prop_fdre_C_Q)         0.141     1.624 f  Component1/firstDivider_reg/Q
+                         net (fo=2, routed)           0.168     1.793    Component1/firstDivider
+    SLICE_X53Y95         LUT1 (Prop_lut1_I0_O)        0.045     1.838 r  Component1/firstDivider_i_1/O
+                         net (fo=1, routed)           0.000     1.838    Component1/p_0_in
+    SLICE_X53Y95         FDRE                                         r  Component1/firstDivider_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -298,15 +298,15 @@ Slack (MET) :             0.427ns  (arrival time - required time)
     E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clock_IBUF_inst/O
                          net (fo=1, routed)           0.699     1.136    clock_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  clock_IBUF_BUFG_inst/O
-                         net (fo=1, routed)           0.834     1.999    Component1/clock
-    SLICE_X52Y95         FDRE                                         r  Component1/firstDivider_reg/C
+                         net (fo=1, routed)           0.834     1.999    Component1/clockIn
+    SLICE_X53Y95         FDRE                                         r  Component1/firstDivider_reg/C
                          clock pessimism             -0.515     1.483    
-    SLICE_X52Y95         FDRE (Hold_fdre_C_D)         0.091     1.574    Component1/firstDivider_reg
+    SLICE_X53Y95         FDRE (Hold_fdre_C_D)         0.091     1.574    Component1/firstDivider_reg
   -------------------------------------------------------------------
                          required time                         -1.574    
-                         arrival time                           2.002    
+                         arrival time                           1.838    
   -------------------------------------------------------------------
-                         slack                                  0.427    
+                         slack                                  0.263    
 
 
 
@@ -321,11 +321,11 @@ Sources:            { clock }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
 Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  clock_IBUF_BUFG_inst/I
-Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X52Y95    Component1/firstDivider_reg/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X52Y95    Component1/firstDivider_reg/C
-Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X52Y95    Component1/firstDivider_reg/C
-High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X52Y95    Component1/firstDivider_reg/C
-High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X52Y95    Component1/firstDivider_reg/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X53Y95    Component1/firstDivider_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X53Y95    Component1/firstDivider_reg/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X53Y95    Component1/firstDivider_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X53Y95    Component1/firstDivider_reg/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X53Y95    Component1/firstDivider_reg/C
 
 
 
