@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Dec 10 18:52:58 2019
+| Date         : Wed Dec 11 01:41:37 2019
 | Host         : LAPTOP-IJTJ43C1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file VGAController_control_sets_placed.rpt
 | Design       : VGAController
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    15 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    47 |
+| Unused register locations in slices containing registers |    44 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -46,8 +46,8 @@ Table of Contents
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     1 |
-| >= 16              |     9 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     8 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              37 |           19 |
+| No           | No                    | No                     |              37 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              49 |           19 |
+| No           | Yes                   | No                     |              46 |           15 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             139 |           53 |
+| Yes          | Yes                   | No                     |             129 |           45 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -76,18 +76,18 @@ Table of Contents
 |  Component1/firstDivider    |                                      |                                            |                1 |              1 |
 |  clock_IBUF_BUFG            |                                      |                                            |                1 |              1 |
 |  playingCurrent_reg_i_2_n_0 | BTNC_IBUF                            | Component2/ballControl/currentX0           |                1 |              1 |
-|  VGAClock_BUFG              | Component2/paddleCursor[9]_i_2_n_0   | Component2/ballControl/SS[0]               |                7 |             10 |
-|  VGAClock_BUFG              | Component2/paddleAICursor[9]_i_1_n_0 | Component2/ballControl/SS[0]               |                7 |             12 |
-|  VGAClock_BUFG              |                                      |                                            |                6 |             14 |
+|  VGAClock_BUFG              | Component2/paddleCursor[9]_i_2_n_0   | Component2/ballControl/SS[0]               |                5 |             10 |
+|  VGAClock_BUFG              | Component2/paddleAICursor[9]_i_1_n_0 | Component2/ballControl/SS[0]               |                5 |             12 |
+|  VGAClock_BUFG              |                                      |                                            |                5 |             14 |
+|  VGAClock_BUFG              |                                      | Component2/clear                           |                7 |             15 |
 |  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleAILeft        |                4 |             16 |
 |  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleAIRight       |                4 |             16 |
-|  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleRight         |                4 |             16 |
 |  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleLeft          |                4 |             16 |
-|  VGAClock_BUFG              |                                      | Component2/clear                           |               11 |             18 |
+|  VGAClock_BUFG              | Component2/ballControl/playing       | Component2/ballControl/paddleRight         |                4 |             16 |
 |  playingCurrent_reg_i_2_n_0 | Component2/ballControl/playing       | Component2/ballControl/currentX[9]_i_1_n_0 |                6 |             20 |
-|  playingCurrent_reg_i_2_n_0 |                                      |                                            |               11 |             21 |
+|  playingCurrent_reg_i_2_n_0 |                                      |                                            |                9 |             21 |
+|  VGAClock_BUFG              | Component2/vPosCurrent0              | Component2/vPosNext                        |               12 |             22 |
 |  VGAClock_BUFG              |                                      | Component2/ballMovement                    |                8 |             31 |
-|  VGAClock_BUFG              | Component2/vPosCurrent0              | Component2/vPosNext                        |               16 |             32 |
 +-----------------------------+--------------------------------------+--------------------------------------------+------------------+----------------+
 
 

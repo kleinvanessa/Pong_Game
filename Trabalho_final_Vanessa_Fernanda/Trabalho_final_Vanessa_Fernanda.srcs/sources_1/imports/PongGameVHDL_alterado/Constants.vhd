@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
--- Engineer: EFE ACER
+-- Engineer: Vanessa Klein e Fernanda Ferreira
 -- Project Name: Pong Game
 -- Brief: This code is a package consisting of data related to some frequently
 --        used constants.

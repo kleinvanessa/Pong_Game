@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Constants.vhd" \
+"../../../../Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd" \
+"../../../../Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/ClockDivider.vhd" \
+"../../../../Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd" \
+"../../../../Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/VGAController.vhd" \
+
+# Do not sort compile order
+nosort

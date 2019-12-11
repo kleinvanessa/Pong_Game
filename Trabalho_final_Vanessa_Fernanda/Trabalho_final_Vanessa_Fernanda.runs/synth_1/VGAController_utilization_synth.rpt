@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Dec 10 18:45:45 2019
+| Date         : Wed Dec 11 00:00:22 2019
 | Host         : LAPTOP-IJTJ43C1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
 | Design       : VGAController
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 2172 |     0 |     63400 |  3.43 |
-|   LUT as Logic          | 2172 |     0 |     63400 |  3.43 |
+| Slice LUTs*             | 1871 |     0 |     63400 |  2.95 |
+|   LUT as Logic          | 1871 |     0 |     63400 |  2.95 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  219 |     0 |    126800 |  0.17 |
-|   Register as Flip Flop |  219 |     0 |    126800 |  0.17 |
+| Slice Registers         |  206 |     0 |    126800 |  0.16 |
+|   Register as Flip Flop |  206 |     0 |    126800 |  0.16 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                |  173 |     0 |     31700 |  0.55 |
-| F8 Muxes                |   45 |     0 |     15850 |  0.28 |
+| F7 Muxes                |   76 |     0 |     31700 |  0.24 |
+| F8 Muxes                |   14 |     0 |     15850 |  0.09 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 33    |          Yes |         Set |            - |
-| 186   |          Yes |       Reset |            - |
+| 30    |          Yes |         Set |            - |
+| 176   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,18 +147,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 1212 |                 LUT |
-| LUT1     |  378 |                 LUT |
-| LUT4     |  370 |                 LUT |
+| LUT6     |  946 |                 LUT |
+| LUT1     |  375 |                 LUT |
+| LUT4     |  354 |                 LUT |
 | CARRY4   |  324 |          CarryLogic |
-| LUT5     |  302 |                 LUT |
-| FDRE     |  186 |        Flop & Latch |
-| MUXF7    |  173 |               MuxFx |
-| LUT3     |  155 |                 LUT |
-| LUT2     |  149 |                 LUT |
-| MUXF8    |   45 |               MuxFx |
-| FDSE     |   33 |        Flop & Latch |
+| LUT5     |  289 |                 LUT |
+| FDRE     |  176 |        Flop & Latch |
+| LUT3     |  147 |                 LUT |
+| LUT2     |  146 |                 LUT |
+| MUXF7    |   76 |               MuxFx |
+| FDSE     |   30 |        Flop & Latch |
 | OBUF     |   14 |                  IO |
+| MUXF8    |   14 |               MuxFx |
 | IBUF     |    6 |                  IO |
 | BUFG     |    3 |               Clock |
 | DSP48E1  |    1 |    Block Arithmetic |

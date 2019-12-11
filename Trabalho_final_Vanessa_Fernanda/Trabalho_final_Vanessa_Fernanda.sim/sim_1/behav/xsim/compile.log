@@ -1,0 +1,9 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Constants.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/BallController.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BallController'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/ClockDivider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ClockDivider'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/Sync.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Sync'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projetos/Pong_Game/Trabalho_final_Vanessa_Fernanda/Trabalho_final_Vanessa_Fernanda.srcs/sources_1/imports/PongGameVHDL_alterado/VGAController.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VGAController'

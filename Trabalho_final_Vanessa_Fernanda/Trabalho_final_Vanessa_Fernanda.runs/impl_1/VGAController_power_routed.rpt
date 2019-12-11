@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Tue Dec 10 18:54:08 2019
+| Date             : Wed Dec 11 01:43:01 2019
 | Host             : LAPTOP-IJTJ43C1 running 64-bit major release  (build 9200)
 | Command          : report_power -file VGAController_power_routed.rpt -pb VGAController_power_summary_routed.pb -rpx VGAController_power_routed.rpx
 | Design           : VGAController
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.112        |
+| Total On-Chip Power (W)  | 0.109        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.014        |
+| Dynamic (W)              | 0.012        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.007 |     3343 |       --- |             --- |
-|   LUT as Logic |     0.006 |     2150 |     63400 |            3.39 |
+| Slice Logic    |     0.006 |     2893 |       --- |             --- |
+|   LUT as Logic |     0.005 |     1855 |     63400 |            2.93 |
 |   CARRY4       |    <0.001 |      324 |     15850 |            2.04 |
-|   F7/F8 Muxes  |    <0.001 |      218 |     63400 |            0.34 |
+|   F7/F8 Muxes  |    <0.001 |       90 |     63400 |            0.14 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   Register     |    <0.001 |      225 |    126800 |            0.18 |
+|   Register     |    <0.001 |      212 |    126800 |            0.17 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.006 |     1927 |       --- |             --- |
+| Signals        |     0.005 |     1741 |       --- |             --- |
 | DSPs           |    <0.001 |        1 |       240 |            0.42 |
 | I/O            |    <0.001 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.112 |          |           |                 |
+| Total          |     0.109 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.029 |       0.014 |      0.015 |
+| Vccint    |       1.000 |     0.027 |       0.012 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,8 +143,8 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| VGAController   |     0.014 |
-|   Component2    |     0.013 |
+| VGAController   |     0.012 |
+|   Component2    |     0.011 |
 |     ballControl |     0.001 |
 +-----------------+-----------+
 

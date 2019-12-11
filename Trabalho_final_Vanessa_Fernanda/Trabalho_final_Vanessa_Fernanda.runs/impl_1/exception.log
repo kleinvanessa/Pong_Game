@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Projetos\Pong_Game\Trabalho_final_Vanessa_Fernanda\Trabalho_final_Vanessa_Fernanda.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permissão negada
